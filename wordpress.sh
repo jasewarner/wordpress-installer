@@ -7,16 +7,16 @@
 #
 # 	To use this script, go to the directory you want to install Wordpress to and run this command:
 #
-# 	`curl -O https://raw.githubusercontent.com/jasewarner/wordpress-installer/master/wordpress.sh`
+# 	curl -O https://raw.githubusercontent.com/jasewarner/wordpress-installer/master/wordpress.sh
 #
-#   Run the script with `sh ./wordpress.sh`
+#   Run the script with: sh ./wordpress.sh
 #
 # 	There you go.
 #
 
 # Latest version of WP
 clear
-echo "\e[1mWordpress Bash Install\e[0m\n\n"
+echo "WordPress Installer\n"
 
 read -e -p "Database Name: " dbname
 read -e -p "Database Username: " dbuser
