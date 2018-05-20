@@ -4,7 +4,7 @@
 # 	------------------
 # 	This script installs the latest version of WordPress as well as various useful plugins.
 #
-# 	To use this script, go to the directory you want to install Wordpress to in the terminal and run this command:
+# 	To use this script, go to the directory you want to install Wordpress to and run this command:
 #
 # 	curl -O https://raw.githubusercontent.com/jasewarner/wordpress-installer/master/wordpress.sh
 #
@@ -13,7 +13,7 @@
 
 # Latest version of WP
 clear
-printf "\e[1mWordpress Bash Install\e[0m\n\n"
+echo "\e[1mWordpress Bash Install\e[0m\n\n"
 
 read -e -p "Database Name: " dbname
 read -e -p "Database Username: " dbuser
@@ -25,21 +25,21 @@ if [ "$run" == n ] ; then
 exit
 
 else
-printf "\nDownloading the latest version of Wordpress... "
+echo "\nDownloading the latest version of Wordpress... "
 curl --remote-name --silent --show-error https://wordpress.org/latest.tar.gz
-printf "Done!\n"
+echo "Done! 👍"
 
-printf "Uncompressing the file... "
+echo "Uncompressing the file... "
 tar --extract --gzip --file latest.tar.gz
 rm latest.tar.gz
-printf "Done!\n"
+echo "Done! 👍"
 
-printf "Putting the files in place... "
+echo "Putting the files in place... "
 cp -R -f wordpress/* .
 rm -R wordpress
-printf "Done!\n"
+echo "Done! 👍"
 
-printf "Configuring Wordpress... "
+echo "Configuring Wordpress... "
 cp wp-config-sample.php wp-config.php
 sed -i "s/database_name_here/$dbname/g" wp-config.php
 sed -i "s/username_here/$dbuser/g" wp-config.php
@@ -56,12 +56,12 @@ perl -i -pe'
   s/put your unique phrase here/salt()/ge
 ' wp-config.php
 
-printf "Done!\n"
+echo "Done! 👍"
 
-printf "Applying folders and files permissions... "
+echo "Applying folders and files permissions... "
 find . -type d -exec chmod 755 {} \;
 find . -type f -exec chmod 644 {} \;
-printf "Done!\n"
+echo "Done! 👍"
 
 # Yoast SEO
 echo "Fetching Yoast-SEO plugin...";
