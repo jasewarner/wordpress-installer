@@ -7,7 +7,9 @@
 #
 # 	To use this script, go to the directory you want to install Wordpress to and run this command:
 #
-# 	curl -O https://raw.githubusercontent.com/jasewarner/wordpress-installer/master/wordpress.sh
+# 	`curl -O https://raw.githubusercontent.com/jasewarner/wordpress-installer/master/wordpress.sh`
+#
+#   Run the script with `sh ./wordpress.sh`
 #
 # 	There you go.
 #
@@ -82,6 +84,6 @@ rm -rf wordpress;
 echo "Disabling file editor...";
 echo "
 /* Disable the file editor */
-define(‘DISALLOW_FILE_EDIT’, true);" >> wp-config-sample.php
+define('DISALLOW_FILE_EDIT', true);" >> wp-config-sample.php
 
 echo "Fantastisch! All done 🙌";
