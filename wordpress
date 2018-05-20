@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# 	WordPress Installer
+# 	------------------
+# 	This script installs the latest version of WordPress as well as various useful plugins.
+#
+# 	To use this script, go to the directory you want to install Wordpress to in the terminal and run this command:
+#
+# 	curl https://raw.github.com/jasewarner/wordpress-installer/master/wordpress | sh
+#
+# 	There you go.
+#
+
+# Latest version of WP
+echo "Fetching WordPress...";
+wget --quiet http://wordpress.org/latest.zip;
+unzip -q latest.zip;
+
+# Yoast SEO
+echo "Fetching Yoast-SEO plugin...";
+wget --quiet https://downloads.wordpress.org/plugin/wordpress-seo.zip;
+unzip -q wordpress-seo.zip;
+mv wordpress-seo wordpress/wp-content/plugins/
+
+# Cleanup
+echo "Cleaning up temporary files and directories...";
+rm *.zip
+
+# Move stuff into current directory
+mv wordpress/* .;
+rm -rf wordpress;
+
+# Disable the built-in file editor
+echo "Disabling file editor...";
+echo "
+/* Disable the file editor */
+define(‘DISALLOW_FILE_EDIT’, true);" >> wp-config-sample.php
+
+echo "Fantastisch! All done 🙌";
