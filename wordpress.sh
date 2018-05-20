@@ -11,8 +11,6 @@
 #
 #   Run the script with: sh ./wordpress.sh
 #
-# 	There you go.
-#
 
 #
 #   Install WordPress
