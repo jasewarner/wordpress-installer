@@ -78,7 +78,9 @@ rm *.zip
 
 # Move stuff into current directory
 mv wordpress/* .;
-rm -rf wordpress;
+
+# Remove installation script file
+rm -rf wordpress.sh;
 
 # Disable the built-in file editor
 echo "Disabling file editor...";
@@ -87,3 +89,5 @@ echo "
 define('DISALLOW_FILE_EDIT', true);" >> wp-config-sample.php
 
 echo "Fantastisch! All done 🙌";
+
+fi
