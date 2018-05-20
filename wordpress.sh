@@ -3,7 +3,7 @@
 #
 #   WordPress Installer
 # 	------------------
-# 	This script installs the latest version of WordPress as well as various useful plugins.
+# 	This script installs the latest version of WordPress as well as various useful plugins and a boilerplate theme.
 #
 # 	To use this script, go to the directory you want to install Wordpress to and run this command:
 #
