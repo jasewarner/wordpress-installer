@@ -13,12 +13,25 @@
 #
 
 #
+#   Output colours
+#   ------------------
+#
+
+BLUE='\033[0;34m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+#
 #   Install WordPress
 #   ------------------
 #
 
 clear
-echo "WordPress Installer\n"
+echo ${GREEN}
+echo "+---------------------+"
+echo "| WordPress Installer |"
+echo "+---------------------+"
+echo ${NC}
 
 read -e -p "Database Name: " dbname
 read -e -p "Database Username: " dbuser
@@ -37,17 +50,17 @@ exit
 else
 echo "\nDownloading the latest version of Wordpress... "
 curl --remote-name --silent --show-error https://wordpress.org/latest.tar.gz
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 echo "Uncompressing the file... "
 tar --extract --gzip --file latest.tar.gz
 rm latest.tar.gz
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 echo "Putting the files in place... "
 cp -R -f wordpress/* .
 rm -R wordpress
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 echo "Configuring WordPress... "
 cp wp-config-sample.php wp-config.php
@@ -66,12 +79,12 @@ perl -i -pe '
   s/put your unique phrase here/salt()/ge
 ' wp-config.php
 
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 echo "Applying folder and file permissions... "
 find . -type d -exec chmod 755 {} \;
 find . -type f -exec chmod 644 {} \;
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 #
 #   Install plugins
@@ -83,49 +96,49 @@ echo "Fetching Advanced Custom Fields plugin...";
 wget --quiet https://downloads.wordpress.org/plugin/advanced-custom-fields.zip;
 unzip -q advanced-custom-fields.zip;
 mv advanced-custom-fields/ wp-content/plugins/
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 #   ACF for Yoast SEO
 echo "Fetching ACF Content Analysis for Yoast SEO plugin...";
 wget --quiet https://downloads.wordpress.org/plugin/acf-content-analysis-for-yoast-seo.zip;
 unzip -q acf-content-analysis-for-yoast-seo.zip;
 mv acf-content-analysis-for-yoast-seo/ wp-content/plugins/
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 #   Contact Form 7
 echo "Fetching Contact Form 7 plugin...";
 wget --quiet https://downloads.wordpress.org/plugin/contact-form-7.zip;
 unzip -q contact-form-7.zip;
 mv contact-form-7/ wp-content/plugins/
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 #   Flamingo
 echo "Fetching Flamingo plugin...";
 wget --quiet https://downloads.wordpress.org/plugin/flamingo.zip;
 unzip -q flamingo.zip;
 mv flamingo/ wp-content/plugins/
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 #   W3 Total Cache
 echo "Fetching W3 Total Cache plugin...";
 wget --quiet https://downloads.wordpress.org/plugin/w3-total-cache.zip;
 unzip -q w3-total-cache.zip;
 mv w3-total-cache/ wp-content/plugins/
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 #   Wordfence Security
 echo "Fetching Wordfence Security plugin...";
 wget --quiet https://downloads.wordpress.org/plugin/wordfence.zip;
 unzip -q wordfence.zip;
 mv wordfence/ wp-content/plugins/
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 #   WordPress SEO a.k.a. Yoast
 echo "Fetching WordPress SEO (a.k.a. Yoast) plugin...";
 wget --quiet https://downloads.wordpress.org/plugin/wordpress-seo.zip;
 unzip -q wordpress-seo.zip;
 mv wordpress-seo/ wp-content/plugins/
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 #
 #   Remove default WP plugins
@@ -134,7 +147,7 @@ echo "Done! ✅\n"
 echo "Removing default WordPress plugins..."
 rm -rf wp-content/plugins/akismet
 rm -rf wp-content/plugins/hello.php
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 #
 #   Remove older WordPress default themes
@@ -144,7 +157,7 @@ echo "Removing default WordPress themes..."
 rm -rf wp-content/themes/twentyfifteen
 rm -rf wp-content/themes/twentysixteen
 rm -rf wp-content/themes/twentyseventeen
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 #
 #   Install boilerplate theme (packaged with Gulp.js)
@@ -155,12 +168,12 @@ theme_slug=$(echo "${theme_name}" | sed -e 's/[^[:alnum:]]/-/g' \
 
 echo "Downloading boilerplate theme packaged with Gulp.js..."
 curl -LOk --silent https://github.com/jasewarner/gulp-wordpress/archive/master.zip
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 echo "Uncompressing the zip file and moving it to the correct location..."
 unzip -q master.zip
 mv gulp-wordpress-master/ wp-content/themes/${theme_slug}
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 echo "Updating the theme details..."
 
@@ -184,7 +197,7 @@ sed -i "" "s?author-name?$theme_author?g" wp-content/themes/${theme_slug}/assets
 #   wp scripts handle
 sed -i "" "s?theme-name?$theme_slug?g" wp-content/themes/${theme_slug}/functions/func-script.php
 
-echo "Done! ✅\n"
+echo ${GREEN}"Done! ✅\n"${NC}
 
 #
 #   Tidy up
@@ -211,6 +224,6 @@ define('DISALLOW_FILE_EDIT', true);" >> wp-config.php
 echo "Removing wp-config-sample.php...\n"
 rm -rf wp-config-sample.php
 
-echo "Fantastisch! All done 🙌";
+echo ${GREEN}"Fantastisch! All done 🙌"${NC};
 
 fi
