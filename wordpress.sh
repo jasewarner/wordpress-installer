@@ -33,16 +33,16 @@ echo "| WordPress Installer |"
 echo "+---------------------+"
 echo ${NC}
 
-read -e -p "Database Name: " dbname
-read -e -p "Database Username: " dbuser
-read -s -p "Database Password: " dbpass; echo
+read -p $'\e[34m Database Name: \e[0m' dbname
+read -p $'\e[34m Database Username:  \e[0m' dbuser
+read -s -p $'\e[34m Database Password:  \e[0m' dbpass; echo
 stty echo
-read -e -p "Database Hostname: " dbhost
-read -e -p "Theme name (e.g. My WP Theme): " theme_name
-read -e -p "Theme author: " theme_author
-read -e -p "Theme author URI: " theme_author_uri
-read -e -p "Theme description: " theme_description
-read -e -p "Run install? (Y/n) " run
+read -p $'\e[34m Database Hostname:  \e[0m' dbhost
+read -p $'\e[34m Theme name (e.g. My WP Theme):  \e[0m' theme_name
+read -p $'\e[34m Theme author:  \e[0m' theme_author
+read -p $'\e[34m Theme author URI:  \e[0m' theme_author_uri
+read -p $'\e[34m Theme description:  \e[0m' theme_description
+read -p $'\e[34m Run install? (Y/n)  \e[0m' run
 
 if [ "$run" == n ] ; then
 exit
