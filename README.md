@@ -13,7 +13,7 @@ However I needed more features to speed up my day-to-day WordPress work, so I bu
 
 `cd` into the project root and run the following in command-line:
 
-`curl https://raw.github.com/jasewarner/wordpress-installer/master/wordpress | sh`
+`curl -O https://raw.githubusercontent.com/jasewarner/wordpress-installer/master/wordpress.sh`
 
 Then run the script: `sh ./wordpress.sh`
 
