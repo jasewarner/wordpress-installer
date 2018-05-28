@@ -209,11 +209,20 @@ sed -i "" "s?<Theme_Text_Domain>?$theme_slug?g" wp-content/themes/"${theme_slug}
 sed -i "" "s?theme-name?$theme_slug?g" wp-content/themes/"${theme_slug}"/assets/gulpfile.js
 sed -i "" "s?package-name?$theme_name?g" wp-content/themes/"${theme_slug}"/assets/package.json
 sed -i "" "s?package-description?$theme_description?g" wp-content/themes/"${theme_slug}"/assets/package.json
-sed -i "" "s?package-description?$theme_description?g" wp-content/themes/"${theme_slug}"/assets/package.json
 sed -i "" "s?author-name?$theme_author?g" wp-content/themes/"${theme_slug}"/assets/package.json
 
 #   wp scripts handle
 sed -i "" "s?theme-name?$theme_slug?g" wp-content/themes/"${theme_slug}"/functions/func-script.php
+
+#   php theme files
+sed -i "" "s?<Author>?$theme_author?g" wp-content/themes/"${theme_slug}"/*.php
+sed -i "" "s?<Package>?$theme_slug?g" wp-content/themes/"${theme_slug}"/*.php
+sed -i "" "s?<Author>?$theme_author?g" wp-content/themes/"${theme_slug}"/functions/*.php
+sed -i "" "s?<Package>?$theme_slug?g" wp-content/themes/"${theme_slug}"/functions/*.php
+
+#   add author admin credit to backend
+sed -i "" "s?http://author.com?$theme_author_uri?g" wp-content/themes/"${theme_slug}"/functions/func-admin.php
+sed -i "" "s?Author Name?$theme_author?g" wp-content/themes/"${theme_slug}"/functions/func-admin.php
 
 echo "${GREEN}Done! ✅${NC}"
 printf '\n'
