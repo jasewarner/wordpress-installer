@@ -211,8 +211,11 @@ sed -i "" "s?package-name?$theme_name?g" wp-content/themes/"${theme_slug}"/asset
 sed -i "" "s?package-description?$theme_description?g" wp-content/themes/"${theme_slug}"/assets/package.json
 sed -i "" "s?author-name?$theme_author?g" wp-content/themes/"${theme_slug}"/assets/package.json
 
-#   wp scripts handle
+#   wp script handle
 sed -i "" "s?theme-name?$theme_slug?g" wp-content/themes/"${theme_slug}"/functions/func-script.php
+
+#   wp style handle
+sed -i "" "s?theme-name?$theme_slug?g" wp-content/themes/"${theme_slug}"/functions/func-style.php
 
 #   php theme files
 sed -i "" "s?<Author>?$theme_author?g" wp-content/themes/"${theme_slug}"/*.php
