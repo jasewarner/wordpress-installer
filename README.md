@@ -1,6 +1,6 @@
 # WordPress Installer
 
-A shell for installing WordPress along with useful plugins and a [boilerplate theme](https://github.com/jasewarner/gulp-wordpress/) packaged with Gulp.js.
+A shell script for installing WordPress along with useful plugins and a [boilerplate theme](https://github.com/jasewarner/gulp-wordpress/) packaged with Gulp.js.
 
 ## Author
 
