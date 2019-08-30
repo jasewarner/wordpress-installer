@@ -98,15 +98,15 @@ printf '\n'
 
 #   ACF
 echo "Fetching Advanced Custom Fields plugin...";
-wget --quiet https://downloads.wordpress.org/plugin/advanced-custom-fields.latest-stable.zip;
-unzip -q advanced-custom-fields.zip;
+wget --quiet https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.3.zip;
+unzip -q advanced-custom-fields.5.8.3.zip;
 mv advanced-custom-fields/ wp-content/plugins/
 echo "${GREEN}Done! ✅${NC}"
 printf '\n'
 
 #   ACF for Yoast SEO
 echo "Fetching ACF Content Analysis for Yoast SEO plugin...";
-wget --quiet https://downloads.wordpress.org/plugin/acf-content-analysis-for-yoast-seo.latest-stable.zip;
+wget --quiet https://downloads.wordpress.org/plugin/acf-content-analysis-for-yoast-seo.zip;
 unzip -q acf-content-analysis-for-yoast-seo.zip;
 mv acf-content-analysis-for-yoast-seo/ wp-content/plugins/
 echo "${GREEN}Done! ✅${NC}"
@@ -114,7 +114,7 @@ printf '\n'
 
 #   Contact Form 7
 echo "Fetching Contact Form 7 plugin...";
-wget --quiet https://downloads.wordpress.org/plugin/contact-form-7.latest-stable.zip;
+wget --quiet https://downloads.wordpress.org/plugin/contact-form-7.zip;
 unzip -q contact-form-7.zip;
 mv contact-form-7/ wp-content/plugins/
 echo "${GREEN}Done! ✅${NC}"
@@ -122,7 +122,7 @@ printf '\n'
 
 #   Flamingo
 echo "Fetching Flamingo plugin...";
-wget --quiet https://downloads.wordpress.org/plugin/flamingo.latest-stable.zip;
+wget --quiet https://downloads.wordpress.org/plugin/flamingo.zip;
 unzip -q flamingo.zip;
 mv flamingo/ wp-content/plugins/
 echo "${GREEN}Done! ✅${NC}"
@@ -130,7 +130,7 @@ printf '\n'
 
 #   W3 Total Cache
 echo "Fetching W3 Total Cache plugin...";
-wget --quiet https://downloads.wordpress.org/plugin/w3-total-cache.latest-stable.zip;
+wget --quiet https://downloads.wordpress.org/plugin/w3-total-cache.zip;
 unzip -q w3-total-cache.zip;
 mv w3-total-cache/ wp-content/plugins/
 echo "${GREEN}Done! ✅${NC}"
@@ -138,7 +138,7 @@ printf '\n'
 
 #   Wordfence Security
 echo "Fetching Wordfence Security plugin...";
-wget --quiet https://downloads.wordpress.org/plugin/wordfence.latest-stable.zip;
+wget --quiet https://downloads.wordpress.org/plugin/wordfence.zip;
 unzip -q wordfence.zip;
 mv wordfence/ wp-content/plugins/
 echo "${GREEN}Done! ✅${NC}"
@@ -146,7 +146,7 @@ printf '\n'
 
 #   WordPress SEO a.k.a. Yoast
 echo "Fetching WordPress SEO (a.k.a. Yoast) plugin...";
-wget --quiet https://downloads.wordpress.org/plugin/wordpress-seo.latest-stable.zip;
+wget --quiet https://downloads.wordpress.org/plugin/wordpress-seo.zip;
 unzip -q wordpress-seo.zip;
 mv wordpress-seo/ wp-content/plugins/
 echo "${GREEN}Done! ✅${NC}"
