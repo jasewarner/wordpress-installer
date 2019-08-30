@@ -208,7 +208,7 @@ sed -i "" "s?<Theme_Text_Domain>?$theme_slug?g" wp-content/themes/"${theme_slug}
 
 #   gulp.js
 sed -i "" "s?theme-name?$theme_slug?g" wp-content/themes/"${theme_slug}"/assets/gulpfile.js
-sed -i "" "s?package-name?$theme_name?g" wp-content/themes/"${theme_slug}"/assets/package.json
+sed -i "" "s?package-name?$theme_slug?g" wp-content/themes/"${theme_slug}"/assets/package.json
 sed -i "" "s?package-description?$theme_description?g" wp-content/themes/"${theme_slug}"/assets/package.json
 sed -i "" "s?author-name?$theme_author?g" wp-content/themes/"${theme_slug}"/assets/package.json
 
