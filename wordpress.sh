@@ -170,6 +170,7 @@ echo "Removing default WordPress themes..."
 rm -rf wp-content/themes/twentyfifteen
 rm -rf wp-content/themes/twentysixteen
 rm -rf wp-content/themes/twentyseventeen
+rm -rf wp-content/themes/twentynineteen
 echo "${GREEN}Done! ✅${NC}"
 printf '\n'
 
