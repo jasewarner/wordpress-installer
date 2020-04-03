@@ -250,8 +250,14 @@ rm -rf wordpress.sh;
 #   Disable the built-in file editor
 echo "Disabling the file editor...";
 echo "
-/* Disable the file editor */
-define('DISALLOW_FILE_EDIT', true);" >> wp-config.php
+/** Disable the file editor */
+define( 'DISALLOW_FILE_EDIT', true );" >> wp-config.php
+
+#   Define the default theme
+echo "Defining the default theme...";
+echo "
+/** Define the default theme */
+define( 'WP_DEFAULT_THEME', '${theme_slug}' );" >> wp-config.php
 
 #   Remove wp-config-sample.php
 echo "Removing wp-config-sample.php..."
