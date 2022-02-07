@@ -6,7 +6,7 @@ A shell script for installing WordPress along with useful plugins and a [boilerp
 
 [Jase Warner](https://jase.io/)
 
-> If this project has been a help to you, feel free to [buy this grateful developer a beer](https://www.buymeacoffee.com/jasewarner/) 🍻
+> If this project has been a help to you, feel free to [give this grateful developer a coffee](https://www.buymeacoffee.com/jasewarner/) ☕️
 
 ## Synopsis
 
