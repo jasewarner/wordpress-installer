@@ -53,7 +53,7 @@ curl --remote-name --silent --show-error https://wordpress.org/latest.tar.gz
 echo "${GREEN}Done! ✅${NC}"
 printf '\n'
 
-echo "Uncompressing the file... "
+echo "Decompressing the file... "
 tar --extract --gzip --file latest.tar.gz
 rm latest.tar.gz
 echo "${GREEN}Done! ✅${NC}"
@@ -98,8 +98,8 @@ printf '\n'
 
 #   ACF
 echo "Fetching Advanced Custom Fields plugin...";
-wget --quiet https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.3.zip;
-unzip -q advanced-custom-fields.5.8.3.zip;
+wget --quiet https://downloads.wordpress.org/plugin/advanced-custom-fields.zip;
+unzip -q advanced-custom-fields.zip;
 mv advanced-custom-fields/ wp-content/plugins/
 echo "${GREEN}Done! ✅${NC}"
 printf '\n'
@@ -109,30 +109,6 @@ echo "Fetching ACF Content Analysis for Yoast SEO plugin...";
 wget --quiet https://downloads.wordpress.org/plugin/acf-content-analysis-for-yoast-seo.zip;
 unzip -q acf-content-analysis-for-yoast-seo.zip;
 mv acf-content-analysis-for-yoast-seo/ wp-content/plugins/
-echo "${GREEN}Done! ✅${NC}"
-printf '\n'
-
-#   Contact Form 7
-echo "Fetching Contact Form 7 plugin...";
-wget --quiet https://downloads.wordpress.org/plugin/contact-form-7.zip;
-unzip -q contact-form-7.zip;
-mv contact-form-7/ wp-content/plugins/
-echo "${GREEN}Done! ✅${NC}"
-printf '\n'
-
-#   Flamingo
-echo "Fetching Flamingo plugin...";
-wget --quiet https://downloads.wordpress.org/plugin/flamingo.zip;
-unzip -q flamingo.zip;
-mv flamingo/ wp-content/plugins/
-echo "${GREEN}Done! ✅${NC}"
-printf '\n'
-
-#   W3 Total Cache
-echo "Fetching W3 Total Cache plugin...";
-wget --quiet https://downloads.wordpress.org/plugin/w3-total-cache.zip;
-unzip -q w3-total-cache.zip;
-mv w3-total-cache/ wp-content/plugins/
 echo "${GREEN}Done! ✅${NC}"
 printf '\n'
 
@@ -171,6 +147,9 @@ rm -rf wp-content/themes/twentyfifteen
 rm -rf wp-content/themes/twentysixteen
 rm -rf wp-content/themes/twentyseventeen
 rm -rf wp-content/themes/twentynineteen
+rm -rf wp-content/themes/twentytwenty
+rm -rf wp-content/themes/twentytwentyone
+rm -rf wp-content/themes/twentytwentytwo
 echo "${GREEN}Done! ✅${NC}"
 printf '\n'
 
@@ -188,7 +167,7 @@ curl -LOk --silent https://github.com/jasewarner/gulp-wordpress/archive/master.z
 echo "${GREEN}Done! ✅${NC}"
 printf '\n'
 
-echo "Uncompressing the zip file and moving it to the correct location..."
+echo "Decompressing the zip file and moving it to the correct location..."
 unzip -q master.zip
 mv gulp-wordpress-master/ wp-content/themes/"${theme_slug}"
 echo "${GREEN}Done! ✅${NC}"

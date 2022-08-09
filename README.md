@@ -13,7 +13,7 @@ A shell script for installing WordPress along with useful plugins and a [boilerp
 I was looking around for a useful script to speed up the setting-up process for a WordPress site.
 
 After looking around, I found a couple of great scripts by [@snaptortoise](https://github.com/snaptortoise/wordpress-quick-install/) and [@darlanrod](https://github.com/darlanrod/wordpress-shell-script-install/).
-However I needed more features to speed up my day-to-day WordPress work, so I built on top of the fantastic work these guys did to get it to where I needed it to be.
+However, I needed more features to speed up my day-to-day WordPress work, so I built on top of the fantastic work these guys did to get it to where I needed it to be.
 
 ## Installation
 
@@ -33,9 +33,6 @@ The script installs the following WordPress plugins:
 
 * [Advanced Custom Fields](https://en-gb.wordpress.org/plugins/advanced-custom-fields/) †
 * [ACF Content Analysis for Yoast SEO](https://en-gb.wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
-* [Contact Form 7](https://en-gb.wordpress.org/plugins/contact-form-7/)
-* [Flamingo](https://en-gb.wordpress.org/plugins/flamingo/)
-* [W3 Total Cache](https://en-gb.wordpress.org/plugins/w3-total-cache/)
 * [Wordfence Security](https://en-gb.wordpress.org/plugins/wordfence/)
 * [Yoast SEO](https://en-gb.wordpress.org/plugins/wordpress-seo/)
 
