@@ -15,6 +15,10 @@ I was looking around for a useful script to speed up the setting-up process for 
 After looking around, I found a couple of great scripts by [@snaptortoise](https://github.com/snaptortoise/wordpress-quick-install/) and [@darlanrod](https://github.com/darlanrod/wordpress-shell-script-install/).
 However, I needed more features to speed up my day-to-day WordPress work, so I built on top of the fantastic work these guys did to get it to where I needed it to be.
 
+## Prerequisites
+
+In order to use this script, you will need to have `wget` installed. See instructions for Brew here: [https://formulae.brew.sh/formula/wget](https://formulae.brew.sh/formula/wget)
+
 ## Installation
 
 `cd` into the project root and run the following in command-line:
