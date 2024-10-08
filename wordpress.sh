@@ -150,6 +150,7 @@ rm -rf wp-content/themes/twentynineteen
 rm -rf wp-content/themes/twentytwenty
 rm -rf wp-content/themes/twentytwentyone
 rm -rf wp-content/themes/twentytwentytwo
+rm -rf wp-content/themes/twentytwentythree
 echo "${GREEN}Done! ✅${NC}"
 printf '\n'
 
@@ -186,7 +187,6 @@ sed -i "" "s?<Theme_Description>?$theme_description?g" wp-content/themes/"${them
 sed -i "" "s?<Theme_Text_Domain>?$theme_slug?g" wp-content/themes/"${theme_slug}"/style.css
 
 #   gulp.js
-sed -i "" "s?theme-name?$theme_slug?g" wp-content/themes/"${theme_slug}"/assets/gulpfile.js
 sed -i "" "s?package-name?$theme_slug?g" wp-content/themes/"${theme_slug}"/assets/package.json
 sed -i "" "s?package-description?$theme_description?g" wp-content/themes/"${theme_slug}"/assets/package.json
 sed -i "" "s?author-name?$theme_author?g" wp-content/themes/"${theme_slug}"/assets/package.json
