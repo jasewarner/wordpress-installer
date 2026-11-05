@@ -1,6 +1,6 @@
 # WordPress Installer
 
-A shell script for installing WordPress along with useful plugins and a [boilerplate theme](https://github.com/jasewarner/gulp-wordpress/) packaged with Gulp.js.
+A lightweight shell script that automates setting up a clean WordPress install, essential plugins and a [boilerplate starter theme](https://github.com/jasewarner/gulp-wordpress/) packaged with Gulp.js.
 
 ## Author
 
@@ -8,42 +8,46 @@ A shell script for installing WordPress along with useful plugins and a [boilerp
 
 > If this project has been a help to you, feel free to [give this grateful developer a coffee](https://www.buymeacoffee.com/jasewarner/) ☕️
 
-## Synopsis
+## Overview
 
-I was looking around for a useful script to speed up the setting-up process for a WordPress site.
+I was looking around for a useful script to speed up the process when making a new WordPress project.
 
-After looking around, I found a couple of great scripts by [@snaptortoise](https://github.com/snaptortoise/wordpress-quick-install/) and [@darlanrod](https://github.com/darlanrod/wordpress-shell-script-install/).
-However, I needed more features to speed up my day-to-day WordPress work, so I built on top of the fantastic work these guys did to get it to where I needed it to be.
+Inspired by earlier setup scripts from [@snaptortoise](https://github.com/snaptortoise/wordpress-quick-install/) and [@darlanrod](https://github.com/darlanrod/wordpress-shell-script-install/),
+this project adds additional configuration steps, automated salt generation, and my own custom theme workflow.
 
 ## Prerequisites
 
-In order to use this script, you will need to have `wget` installed. See instructions for Brew here: [https://formulae.brew.sh/formula/wget](https://formulae.brew.sh/formula/wget)
+Before running the script, make sure you have:
+* A terminal environment with `curl`, `tar`, `unzip`, and `perl` installed.
+* An empty MySQL database created, along with its username and password.
 
 ## Installation
 
-`cd` into the project root and run the following in command-line:
+Navigate to your target directory and download the installer:
 
-`curl -O https://raw.githubusercontent.com/jasewarner/wordpress-installer/master/wordpress.sh`
+`bash curl -O https://raw.githubusercontent.com/jasewarner/wordpress-installer/master/wordpress.sh`
 
-Then run the script: `sh ./wordpress.sh`
+Run the script: 
 
-It will download the latest version of WordPress, along with the latest version of all the plugins listed in the shell script and install them to the current directory, as well as the boilerplate theme.
+`bash ./wordpress.sh`
 
-> Quick tip: if `wget` throws an error when attempting to retrieve the plugins, you will most likely need to install it! To do so, in the command-line, run `brew install wget`. 
+Follow the prompts to enter your database credentials and theme details. The script will take care of the rest:
+downloading WordPress core files, configuring `wp-config.php`, applying secure permissions, and setting up the theme and plugins.
 
 ## Plugins
 
-The script installs the following WordPress plugins:
+The installer fetches the latest version of:
 
 * [Advanced Custom Fields](https://en-gb.wordpress.org/plugins/advanced-custom-fields/) †
-* [ACF Content Analysis for Yoast SEO](https://en-gb.wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
 * [Wordfence Security](https://en-gb.wordpress.org/plugins/wordfence/)
-* [Yoast SEO](https://en-gb.wordpress.org/plugins/wordpress-seo/)
 
 † I highly recommend purchasing the [Pro](https://www.advancedcustomfields.com/pro/) version!
 
-## Theme
+## Starter Theme
 
-The script also installs my [blank slate WordPress theme](https://github.com/jasewarner/gulp-wordpress/) for Developers, packaged with Gulp.js for processing SCSS and JavaScript (ES6).
+The installer sets up a copy of my [blank-slate WordPress starter theme](https://github.com/jasewarner/gulp-wordpress/).
 
-It also comes with some helpful SCSS mixins and was developed in accordance to the [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/).
+Key features:
+* Pre-configured Gulp workflow for compiling SCSS and bundling modern JavaScript (ES6).
+* Helpful SCSS utilities and mixins.
+* Built in accordance with WordPress Coding Standards.
