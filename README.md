@@ -25,11 +25,11 @@ Before running the script, make sure you have:
 
 Navigate to your target directory and download the installer:
 
-`bash curl -O https://raw.githubusercontent.com/jasewarner/wordpress-installer/master/wordpress.sh`
+`curl -O https://raw.githubusercontent.com/jasewarner/wordpress-installer/master/wordpress.sh`
 
 Run the script: 
 
-`bash ./wordpress.sh`
+`bash wordpress.sh`
 
 Follow the prompts to enter your database credentials and theme details. The script will take care of the rest:
 downloading WordPress core files, configuring `wp-config.php`, applying secure permissions, and setting up the theme and plugins.
